@@ -1,0 +1,37 @@
+Question: You will be given an undirected graph which will be connected as input. Then you will be given a level L. You need to print the node values at level L in descending order. The source will be 0 always.
+
+Sample Input
+
+3 2
+0 1
+0 2
+1
+Sample Output
+2 1
+
+Sample Input
+6 7
+0 1
+0 2
+1 2
+0 3
+4 2
+3 5
+4 3
+1
+Sample Output
+3 2 1
+
+Sample Input
+6 7
+0 1
+0 2
+1 2
+0 3
+4 2
+3 5
+4 3
+2
+Sample Output
+5 4
+
