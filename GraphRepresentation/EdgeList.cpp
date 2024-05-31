@@ -1,30 +1,34 @@
-// Storing the edges as pair
+// Storing the edges as pairs
+
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int n, e;
+    int n, e; // n = number of nodes, e = number of edges
     cin >> n >> e;
+
+    // Create an array of pairs to store the edges
     pair<int, int> edgeList[e];
 
+    // Read all edges and store them in the edgeList
     for (int i = 0; i < e; i++)
     {
-        int a, b;
+        int a, b; // Edge between node a and node b
         cin >> a >> b;
-        edgeList[i].first = a;
-        edgeList[i].second = b;
+        edgeList[i] = make_pair(a, b); // Store the edge as a pair
     }
 
-    for (pair<int, int> i : edgeList)
+    // Print all edges in the form "a -- b"
+    for (const pair<int, int> &edge : edgeList)
     {
-        cout << i.first << " -- " << i.second << endl;
+        cout << edge.first << " -- " << edge.second << endl;
     }
 
     return 0;
 }
 
-// Input:
+// Example Input:
 // 6 6
 // 0 1
 // 1 5
@@ -32,7 +36,8 @@ int main()
 // 0 3
 // 3 4
 // 2 4
-// Output:
+
+// Expected Output:
 // 0 -- 1
 // 1 -- 5
 // 0 -- 4
